@@ -6,4 +6,5 @@ public class AutoModels {
     private String marca;
     private String anio;
     private String color;
+    private byte[] imagen;
 }
