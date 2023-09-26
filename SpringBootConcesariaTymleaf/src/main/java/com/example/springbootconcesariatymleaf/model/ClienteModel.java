@@ -12,7 +12,7 @@ public class ClienteModel {
 
     /*Constructs*/
     public ClienteModel(){
-        
+
     }
 
 }
