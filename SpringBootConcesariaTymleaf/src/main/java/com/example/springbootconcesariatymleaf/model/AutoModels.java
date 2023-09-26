@@ -14,5 +14,5 @@ public class AutoModels {
     private byte[] imagen;
 
     /*Relaciones - apesar que esta en memoria es necesario colocar relaciones*/
-    
+
 }
