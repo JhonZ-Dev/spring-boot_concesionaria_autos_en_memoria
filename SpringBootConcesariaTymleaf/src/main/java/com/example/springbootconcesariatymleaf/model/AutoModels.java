@@ -5,4 +5,5 @@ public class AutoModels {
     private String modelo;
     private String marca;
     private String anio;
+    private String color;
 }
