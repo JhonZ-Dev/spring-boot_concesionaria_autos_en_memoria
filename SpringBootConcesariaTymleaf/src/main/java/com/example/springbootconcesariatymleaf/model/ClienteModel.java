@@ -1,5 +1,8 @@
 package com.example.springbootconcesariatymleaf.model;
 
+import lombok.Data;
+
+@Data
 public class ClienteModel {
 
 
