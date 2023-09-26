@@ -17,5 +17,6 @@ public class ClienteModel {
 
     /*Relacionar con auto*/
     /*Ya que un cliente hace la compra del auto, y el auto le pertenece al cliente*/
+    private AutoModels auto;
 
 }
