@@ -1,5 +1,10 @@
 package com.example.springbootconcesariatymleaf.model;
 
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
 public class AutoModels {
     private Long id;
     private String modelo;
