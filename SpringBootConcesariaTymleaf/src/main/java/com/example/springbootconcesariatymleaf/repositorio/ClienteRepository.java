@@ -22,5 +22,13 @@ public class ClienteRepository {
         this.idGenerator = new AtomicLong(0);
     }
 
+    /*Guardar*/
+    public ClienteModel saveCliente(ClienteModel cliente) {
+        long id = idGenerator.incrementAndGet();
+        cliente.setId(id);
+        clientes.put(id, cliente);
+        return cliente;
+    }
+
 
 }
