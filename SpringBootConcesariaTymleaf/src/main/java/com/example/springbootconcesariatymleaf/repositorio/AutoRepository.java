@@ -1,6 +1,7 @@
 package com.example.springbootconcesariatymleaf.repositorio;
 
 import com.example.springbootconcesariatymleaf.model.AutoModels;
+import com.example.springbootconcesariatymleaf.model.ClienteModel;
 import org.springframework.stereotype.Repository;
 
 import java.util.HashMap;
@@ -36,5 +37,10 @@ public class AutoRepository {
             return auto;
         }
     }
-
+    public AutoModels getAutoById(Long id) {
+        AutoModels auto = autos.get(id);
+        ClienteModel cliente = auto.getCliente();
+        auto.setCliente(cliente); // Asignar el cliente al auto
+        return auto;
+    }
 }
