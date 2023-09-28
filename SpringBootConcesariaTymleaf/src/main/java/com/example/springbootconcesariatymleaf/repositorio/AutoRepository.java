@@ -49,4 +49,8 @@ public class AutoRepository {
     public List<AutoModels> getAllAutos() {
         return new ArrayList<>(autos.values());
     }
+
+    public void eliminarAuto(Long id) {
+        autos.remove(id);
+    }
 }
