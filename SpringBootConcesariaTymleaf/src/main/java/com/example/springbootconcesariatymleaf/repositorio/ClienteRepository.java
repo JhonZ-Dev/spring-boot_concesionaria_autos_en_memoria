@@ -70,5 +70,11 @@ public class ClienteRepository {
         return null; // Si no se encuentra ningún cliente con la identificación proporcionada
     }
 
+    /*Existe cliente por cedula*/
+    public boolean existeClienteConCedula(String identificacion) {
+        return clientes.values().stream()
+                .anyMatch(cliente -> cliente.getIdentificacion().equals(identificacion));
+    }
+
 
 }
