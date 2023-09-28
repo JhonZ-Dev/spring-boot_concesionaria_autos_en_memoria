@@ -19,4 +19,22 @@ public class AutoRepository {
     }
 
     /*GUARDAR*/
+    public AutoModels saveAuto(AutoModels auto){
+        if(auto.getId() !=null){
+            // El auto ya tiene un ID asignado, por lo tanto, es una actualización
+            if(autos.containsKey(auto.getId())){
+                //Reeplazar el auto existente con los nuevos campos
+                autos.put(auto.getId(), auto);
+                return auto;
+            }else{
+                throw new IllegalArgumentException("Cliente no encontrado para el ID: " + auto.getId());
+            }
+        }else{
+            long id = idGenerator.incrementAndGet();
+            auto.setId(id);
+            autos.put(id, auto);
+            return auto;
+        }
+    }
+
 }
