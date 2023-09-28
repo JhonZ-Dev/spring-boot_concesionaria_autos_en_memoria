@@ -4,7 +4,9 @@ import com.example.springbootconcesariatymleaf.model.AutoModels;
 import com.example.springbootconcesariatymleaf.model.ClienteModel;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -42,5 +44,9 @@ public class AutoRepository {
         ClienteModel cliente = auto.getCliente();
         auto.setCliente(cliente); // Asignar el cliente al auto
         return auto;
+    }
+
+    public List<AutoModels> getAllAutos() {
+        return new ArrayList<>(autos.values());
     }
 }
