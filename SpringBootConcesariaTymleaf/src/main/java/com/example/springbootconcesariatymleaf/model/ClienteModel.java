@@ -6,7 +6,7 @@ import lombok.Data;
 public class ClienteModel {
 
 
-    private long id;
+    private Long id;
     private String nombre, apellido, telefono, direccion, edad,identificacion, ciudad_residencia;
 
 
