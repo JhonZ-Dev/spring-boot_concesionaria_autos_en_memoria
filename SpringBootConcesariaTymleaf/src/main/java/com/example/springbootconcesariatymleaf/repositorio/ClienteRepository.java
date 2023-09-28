@@ -55,5 +55,10 @@ public class ClienteRepository {
         return new ArrayList<>(clientes.values());
     }
 
+    /*Elimar por id*/
+    public void deleteClienteById(Long id) {
+        clientes.remove(id);
+    }
+
 
 }
