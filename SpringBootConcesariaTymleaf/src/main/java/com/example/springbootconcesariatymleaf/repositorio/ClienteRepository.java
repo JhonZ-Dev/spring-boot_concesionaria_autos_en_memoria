@@ -61,6 +61,14 @@ public class ClienteRepository {
     }
 
     /*Encontrar cliente por identificacion*/
+    public ClienteModel findByIdentificacion(String identificacion) {
+        for (ClienteModel cliente : clientes.values()) {
+            if (cliente.getIdentificacion().equals(identificacion)) {
+                return cliente;
+            }
+        }
+        return null; // Si no se encuentra ningún cliente con la identificación proporcionada
+    }
 
 
 }
