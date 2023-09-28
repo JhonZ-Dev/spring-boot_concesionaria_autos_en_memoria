@@ -53,4 +53,9 @@ public class AutoRepository {
     public void eliminarAuto(Long id) {
         autos.remove(id);
     }
+
+    public byte[] findImageById(Long id) {
+        AutoModels auto = autos.get(id);
+        return auto != null ? auto.getImagen() : null;
+    }
 }
