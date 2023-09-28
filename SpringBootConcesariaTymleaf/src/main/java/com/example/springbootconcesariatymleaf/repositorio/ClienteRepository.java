@@ -43,5 +43,10 @@ public class ClienteRepository {
         }
     }
 
+    /*Obtener cliente por ID*/
+    public ClienteModel getClienteById(Long id) {
+        return clientes.get(id);
+    }
+
 
 }
