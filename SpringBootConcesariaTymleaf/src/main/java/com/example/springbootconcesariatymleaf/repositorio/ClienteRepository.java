@@ -76,5 +76,12 @@ public class ClienteRepository {
                 .anyMatch(cliente -> cliente.getIdentificacion().equals(identificacion));
     }
 
+    /*PARA VERIFICAR SI YA EXISTE EL NUMERO DE TELEFONO*/
+    public boolean existeClienteConTelefono(String telefono){
+        return clientes.values().stream()
+                .anyMatch(cliente_1 ->cliente_1.getTelefono().equals(telefono) );
+
+    }
+
 
 }
