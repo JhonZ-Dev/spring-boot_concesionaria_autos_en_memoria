@@ -48,5 +48,10 @@ public class ClienteRepository {
         return clientes.get(id);
     }
 
+    /*Obtener todos*/
+    public List<ClienteModel> getAllClientes() {
+        return new ArrayList<>(clientes.values());
+    }
+
 
 }
