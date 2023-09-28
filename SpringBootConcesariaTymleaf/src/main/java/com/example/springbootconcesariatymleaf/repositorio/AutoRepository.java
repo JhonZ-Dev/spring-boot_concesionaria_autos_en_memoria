@@ -17,4 +17,6 @@ public class AutoRepository {
         this.autos = new HashMap<>();
         this.idGenerator = new AtomicLong(0);
     }
+
+    /*GUARDAR*/
 }
