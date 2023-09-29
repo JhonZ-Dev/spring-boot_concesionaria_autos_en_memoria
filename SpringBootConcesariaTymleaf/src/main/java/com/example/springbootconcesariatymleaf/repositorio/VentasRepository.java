@@ -42,4 +42,7 @@ public class VentasRepository {
     public List<VentasModels> getAllVentas() {
         return new ArrayList<>(ventas.values());
     }
+    public void deleteClienteById(Long id) {
+        ventas.remove(id);
+    }
 }
