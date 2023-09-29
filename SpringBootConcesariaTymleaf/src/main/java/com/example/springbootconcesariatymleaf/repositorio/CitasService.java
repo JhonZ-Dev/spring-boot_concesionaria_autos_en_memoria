@@ -39,4 +39,13 @@ public class CitasService {
     public List<CitasModels> getAllCitas() {
         return new ArrayList<>(citas.values());
     }
+    public CitasModels updateCita(CitasModels cita) {
+        Long id = cita.getId();
+        if (citas.containsKey(id)) {
+            citas.put(id, cita);
+            return cita;
+        } else {
+            return null; // Manejar caso en que la cita no existe
+        }
+    }
 }
