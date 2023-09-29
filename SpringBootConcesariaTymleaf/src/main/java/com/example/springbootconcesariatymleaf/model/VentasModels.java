@@ -13,4 +13,12 @@ public class VentasModels {
 
 
     private ClienteModel cliente;
+
+    public String obtenerNombreCompleto() {
+        return cliente.getNombre() + " " + cliente.getApellido();
+    }
+
+    public String obtenerAutoNombre() {
+        return auto.getModelo() + " " + auto.getMarca();
+    }
 }
