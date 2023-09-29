@@ -4,6 +4,8 @@ import com.example.springbootconcesariatymleaf.model.ClienteModel;
 import com.example.springbootconcesariatymleaf.repositorio.ClienteRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class ClienteService {
     private ClienteRepository clienteRepository;
@@ -15,6 +17,9 @@ public class ClienteService {
     }
     public ClienteModel getClienteById(Long id) {
         return clienteRepository.getClienteById(id);
+    }
+    public List<ClienteModel> getAllClientes() {
+        return clienteRepository.getAllClientes();
     }
 
 }
