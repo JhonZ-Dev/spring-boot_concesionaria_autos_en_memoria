@@ -1,5 +1,6 @@
 package com.example.springbootconcesariatymleaf.repositorio;
 
+import com.example.springbootconcesariatymleaf.model.VentasModels;
 import org.springframework.stereotype.Repository;
 
 import java.util.Map;
