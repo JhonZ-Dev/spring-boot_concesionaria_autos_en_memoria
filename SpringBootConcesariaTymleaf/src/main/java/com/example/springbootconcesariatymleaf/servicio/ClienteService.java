@@ -13,5 +13,8 @@ public class ClienteService {
     public ClienteModel saveCliente(ClienteModel cliente) {
         return clienteRepository.saveCliente(cliente);
     }
+    public ClienteModel getClienteById(Long id) {
+        return clienteRepository.getClienteById(id);
+    }
 
 }
