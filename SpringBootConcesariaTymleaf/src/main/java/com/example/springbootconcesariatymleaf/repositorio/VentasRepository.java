@@ -3,7 +3,9 @@ package com.example.springbootconcesariatymleaf.repositorio;
 import com.example.springbootconcesariatymleaf.model.VentasModels;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -36,5 +38,8 @@ public class VentasRepository {
     }
     public VentasModels getVentaById(Long id) {
         return ventas.get(id);
+    }
+    public List<VentasModels> getAllVentas() {
+        return new ArrayList<>(ventas.values());
     }
 }
