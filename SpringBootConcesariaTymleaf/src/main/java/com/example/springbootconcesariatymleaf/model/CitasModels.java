@@ -7,9 +7,15 @@ import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
+
 public class CitasModels {
 
     private Long id;
     private LocalDate fecha_estimada;
     private String hora_estimada;
+
+    public CitasModels(){
+
+    }
+
 }
