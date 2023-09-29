@@ -24,5 +24,7 @@ public class ClienteService {
     public void deleteClienteById(Long id) {
         clienteRepository.deleteClienteById(id);
     }
-
+    public ClienteModel findByIdentificacion(String identificacion){
+        return  clienteRepository.findByIdentificacion(identificacion);
+    }
 }
