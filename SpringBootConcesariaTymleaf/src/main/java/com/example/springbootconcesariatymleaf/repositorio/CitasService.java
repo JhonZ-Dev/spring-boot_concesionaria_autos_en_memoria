@@ -48,4 +48,7 @@ public class CitasService {
             return null; // Manejar caso en que la cita no existe
         }
     }
+    public void deleteClienteById(Long id) {
+        citas.remove(id);
+    }
 }
