@@ -3,7 +3,9 @@ package com.example.springbootconcesariatymleaf.repositorio;
 import com.example.springbootconcesariatymleaf.model.CitasModels;
 import org.springframework.stereotype.Repository;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -33,5 +35,8 @@ public class CitasService {
 
     public CitasModels getCitaById(Long id) {
         return citas.get(id);
+    }
+    public List<CitasModels> getAllCitas() {
+        return new ArrayList<>(citas.values());
     }
 }
