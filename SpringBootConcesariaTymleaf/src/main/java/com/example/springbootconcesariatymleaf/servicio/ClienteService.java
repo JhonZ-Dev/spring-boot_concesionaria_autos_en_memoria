@@ -21,5 +21,8 @@ public class ClienteService {
     public List<ClienteModel> getAllClientes() {
         return clienteRepository.getAllClientes();
     }
+    public void deleteClienteById(Long id) {
+        clienteRepository.deleteClienteById(id);
+    }
 
 }
