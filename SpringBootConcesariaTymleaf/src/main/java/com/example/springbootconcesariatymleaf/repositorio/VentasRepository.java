@@ -34,4 +34,7 @@ public class VentasRepository {
             return venta;
         }
     }
+    public VentasModels getVentaById(Long id) {
+        return ventas.get(id);
+    }
 }
