@@ -27,4 +27,7 @@ public class ClienteService {
     public ClienteModel findByIdentificacion(String identificacion){
         return  clienteRepository.findByIdentificacion(identificacion);
     }
+    public boolean existeClienteConCedula(String identificacion){
+        return clienteRepository.existeClienteConCedula(identificacion);
+    }
 }
