@@ -30,4 +30,8 @@ public class CitasService {
             return cita;
         }
     }
+
+    public CitasModels getCitaById(Long id) {
+        return citas.get(id);
+    }
 }
