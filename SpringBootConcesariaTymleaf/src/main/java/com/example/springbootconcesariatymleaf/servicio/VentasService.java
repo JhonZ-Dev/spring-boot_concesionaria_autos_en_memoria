@@ -22,5 +22,7 @@ public class VentasService {
     public List<VentasModels> getAllVentas() {
         return ventasRepository.getAllVentas();
     }
-
+    public void deleteClienteById(Long id){
+        ventasRepository.deleteClienteById(id);
+    }
 }
