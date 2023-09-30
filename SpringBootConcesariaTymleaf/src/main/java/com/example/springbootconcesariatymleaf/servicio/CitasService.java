@@ -21,6 +21,9 @@ public class CitasService {
     public List<CitasModels> getAllCitas(){
         return citasRepository.getAllCitas();
     }
+    public CitasModels updateCita(CitasModels cita){
+        return citasRepository.updateCita(cita);
+    }
 
 
 
