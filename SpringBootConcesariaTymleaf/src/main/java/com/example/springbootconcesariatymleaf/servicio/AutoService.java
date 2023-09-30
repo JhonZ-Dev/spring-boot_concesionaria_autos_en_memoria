@@ -22,4 +22,8 @@ public class AutoService {
     public List<AutoModels> getAllAutos() {
         return autoRepository.getAllAutos();
     }
+    public void eliminarAuto(Long id) {
+        autoRepository.eliminarAuto(id);
+    }
+
 }
