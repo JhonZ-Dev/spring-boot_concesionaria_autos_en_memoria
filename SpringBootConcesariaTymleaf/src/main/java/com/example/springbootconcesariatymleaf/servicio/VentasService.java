@@ -13,6 +13,8 @@ public class VentasService {
     public VentasModels saveVenta(VentasModels venta) {
         return ventasRepository.saveVenta(venta);
     }
-
+    public VentasModels getVentaById(Long id) {
+        return ventasRepository.getVentaById(id);
+    }
 
 }
