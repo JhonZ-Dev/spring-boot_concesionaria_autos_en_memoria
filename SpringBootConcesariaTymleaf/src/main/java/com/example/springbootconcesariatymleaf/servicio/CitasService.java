@@ -13,7 +13,9 @@ public class CitasService {
     public CitasModels saveCita(CitasModels cita){
         return citasRepository.saveCita(cita);
     }
-
+    public CitasModels getCitaById(Long id){
+        return citasRepository.getCitaById(id);
+    }
 
 
 
