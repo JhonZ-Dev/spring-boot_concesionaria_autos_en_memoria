@@ -25,5 +25,8 @@ public class AutoService {
     public void eliminarAuto(Long id) {
         autoRepository.eliminarAuto(id);
     }
+    public byte[] findImageById(Long id){
+        return autoRepository.findImageById(id);
+    }
 
 }
