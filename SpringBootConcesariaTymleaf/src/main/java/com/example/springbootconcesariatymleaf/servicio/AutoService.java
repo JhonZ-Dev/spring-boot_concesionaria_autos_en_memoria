@@ -7,5 +7,7 @@ import org.springframework.stereotype.Service;
 public class AutoService {
 
     private AutoRepository autoRepository;
-
+    public AutoService() {
+        this.autoRepository = new AutoRepository();
+    }
 }
