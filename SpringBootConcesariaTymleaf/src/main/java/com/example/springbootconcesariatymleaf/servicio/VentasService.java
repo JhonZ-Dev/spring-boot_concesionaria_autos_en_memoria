@@ -9,6 +9,9 @@ public class VentasService {
     public VentasService() {
         this.ventasRepository = new VentasRepository();
     }
+    public VentasModels saveVenta(VentasModels venta) {
+        return ventasRepository.saveVenta(venta);
+    }
 
 
 }
