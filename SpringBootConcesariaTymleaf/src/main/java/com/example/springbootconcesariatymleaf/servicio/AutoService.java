@@ -14,4 +14,7 @@ public class AutoService {
     public AutoModels saveAuto(AutoModels auto) {
         return autoRepository.saveAuto(auto);
     }
+    public AutoModels getAutoById(Long id) {
+        return autoRepository.getAutoById(id);
+    }
 }
