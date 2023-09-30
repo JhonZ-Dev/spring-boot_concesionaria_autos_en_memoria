@@ -24,7 +24,9 @@ public class CitasService {
     public CitasModels updateCita(CitasModels cita){
         return citasRepository.updateCita(cita);
     }
-
+    public void deleteClienteById(Long id){
+        citasRepository.deleteClienteById(id);
+    }
 
 
 
