@@ -9,6 +9,11 @@ public class CitasService {
     public CitasService(){
         this.citasRepository = new CitasRepository();
     }
+    public CitasModels saveCita(CitasModels cita){
+        return citasRepository.saveCita(cita);
+    }
+
+
 
 
 
