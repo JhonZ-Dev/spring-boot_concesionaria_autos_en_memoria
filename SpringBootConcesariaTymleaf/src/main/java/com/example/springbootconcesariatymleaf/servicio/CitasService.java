@@ -1,5 +1,6 @@
 package com.example.springbootconcesariatymleaf.servicio;
 
+import com.example.springbootconcesariatymleaf.model.CitasModels;
 import com.example.springbootconcesariatymleaf.repositorio.CitasRepository;
 import org.springframework.stereotype.Service;
 
