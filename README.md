@@ -12,3 +12,4 @@ Este proyecto esta hecho con la tecnología Spring boot para la parte Backend y 
     </a>
   </p>
 </div>
+[onedark_repo]: https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats&cache_seconds=86400&theme=onedark
