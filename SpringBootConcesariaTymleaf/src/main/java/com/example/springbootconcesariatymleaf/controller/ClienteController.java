@@ -4,10 +4,7 @@ import com.example.springbootconcesariatymleaf.model.ClienteModel;
 import com.example.springbootconcesariatymleaf.servicio.ClienteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("/clientes")
@@ -39,6 +36,13 @@ public class ClienteController {
         }
         clienteService.saveCliente(cliente);
         return "redirect:/clientes";
+    }
+
+    /*Utilizaremos un solitud ajax para validar la celular, cedula, etc*/
+    @GetMapping("/verificar-cedula")
+    @ResponseBody
+    public boolean verificarCedula(@RequestParam("identificacion") String identificacion) {
+        return clienteService.existeClienteConCedula(identificacion);
     }
 
 }
