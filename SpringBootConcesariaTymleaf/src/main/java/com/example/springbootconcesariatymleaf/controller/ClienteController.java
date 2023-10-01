@@ -56,4 +56,10 @@ public class ClienteController {
         return "cliente_detalle";
     }
 
+    @GetMapping
+    public String mostrarListaClientes(Model model) {
+        model.addAttribute("clientes", clienteService.getAllClientes());
+        return "cliente_lista";
+    }
+
 }
