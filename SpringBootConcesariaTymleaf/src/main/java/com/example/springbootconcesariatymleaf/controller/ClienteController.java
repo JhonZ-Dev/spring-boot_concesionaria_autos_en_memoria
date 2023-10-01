@@ -45,4 +45,9 @@ public class ClienteController {
         return clienteService.existeClienteConCedula(identificacion);
     }
 
+    @GetMapping("/verificar-telefono")
+    public boolean verificarTelefono(@RequestParam("telefono") String telefono) {
+        return clienteService.existeClienteConTelefono(telefono);
+    }
+
 }
