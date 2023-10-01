@@ -187,5 +187,10 @@ public class ClienteController {
         // Redirigir a la lista de clientes
         return "redirect:/clientes";
     }
+    @PostMapping("/actualizar")
+    public String actualizarCliente(@ModelAttribute("cliente") ClienteModel cliente) {
+        clienteService.saveCliente(cliente);
+        return "redirect:/clientes";
+    }
 
 }
