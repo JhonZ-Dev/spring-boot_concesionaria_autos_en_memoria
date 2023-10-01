@@ -3,6 +3,14 @@ package com.example.springbootconcesariatymleaf.controller;
 import com.example.springbootconcesariatymleaf.model.ClienteModel;
 import com.example.springbootconcesariatymleaf.servicio.ClienteService;
 import com.lowagie.text.Document;
+import com.lowagie.text.Element;
+import com.lowagie.text.FontFactory;
+import com.lowagie.text.Paragraph;
+import com.lowagie.text.pdf.PdfPTable;
+import com.lowagie.text.*;
+import com.lowagie.text.Image;
+import com.lowagie.text.pdf.PdfPCell;
+
 import com.lowagie.text.pdf.PdfWriter;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
@@ -10,6 +18,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import java.awt.*;
+import java.awt.Font;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.util.List;
