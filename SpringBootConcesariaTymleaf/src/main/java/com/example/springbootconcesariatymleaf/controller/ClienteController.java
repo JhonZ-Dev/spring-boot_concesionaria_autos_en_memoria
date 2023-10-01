@@ -206,6 +206,21 @@ public class ClienteController {
         model.addAttribute("cliente", cliente);
         return "formulario-editar-cliente";
     }
+    @PostMapping("/clientes/{id}/existePorIdentificacion")
+    public String existeClientePorIdentificacion(@PathVariable Long id, @RequestParam String identificacion) {
+        // Buscar el cliente por identificación
+        ClienteModel cliente = clienteService.findByIdentificacion(identificacion);
+
+        if (cliente != null && !cliente.getId().equals(id)) {
+            // Si se encontró un cliente con la identificación y su ID no coincide con el ID proporcionado, significa que ya existe otro cliente con la misma identificación
+            // Aquí puedes mostrar una alerta, lanzar una excepción o realizar cualquier otra acción que desees
+            return "redirect:/clientes?error=existente";
+        } else {
+            // No se encontró ningún cliente con la identificación o el cliente encontrado tiene el mismo ID proporcionado, por lo tanto, no hay conflictos
+            // Aquí puedes realizar cualquier acción adicional que desees
+            return "redirect:/clientes?success";
+        }
+    }
 
 
 }
