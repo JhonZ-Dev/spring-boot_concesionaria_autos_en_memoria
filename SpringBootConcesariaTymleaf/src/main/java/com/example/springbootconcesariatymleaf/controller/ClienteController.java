@@ -197,5 +197,15 @@ public class ClienteController {
         clienteService.deleteClienteById(id);
         return "redirect:/clientes";
     }
+    @GetMapping("/{id}/editar")
+    public String mostrarFormularioEditarCliente(@PathVariable("id") Long id, Model model) {
+        ClienteModel cliente = clienteService.getClienteById(id);
+        if (cliente == null) {
+            return "redirect:/clientes";
+        }
+        model.addAttribute("cliente", cliente);
+        return "formulario-editar-cliente";
+    }
+
 
 }
