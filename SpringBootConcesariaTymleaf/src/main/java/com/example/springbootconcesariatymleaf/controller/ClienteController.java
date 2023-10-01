@@ -49,5 +49,11 @@ public class ClienteController {
     public boolean verificarTelefono(@RequestParam("telefono") String telefono) {
         return clienteService.existeClienteConTelefono(telefono);
     }
+    @GetMapping("/{id}")
+    public String mostrarDetalleCliente(@PathVariable("id") Long id, Model model) {
+        ClienteModel cliente = clienteService.getClienteById(id);
+        model.addAttribute("cliente", cliente);
+        return "cliente_detalle";
+    }
 
 }
