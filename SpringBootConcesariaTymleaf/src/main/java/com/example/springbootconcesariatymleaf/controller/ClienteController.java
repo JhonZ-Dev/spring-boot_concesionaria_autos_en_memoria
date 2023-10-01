@@ -192,5 +192,10 @@ public class ClienteController {
         clienteService.saveCliente(cliente);
         return "redirect:/clientes";
     }
+    @GetMapping("/{id}/eliminar")
+    public String eliminarCliente(@PathVariable("id") Long id) {
+        clienteService.deleteClienteById(id);
+        return "redirect:/clientes";
+    }
 
 }
