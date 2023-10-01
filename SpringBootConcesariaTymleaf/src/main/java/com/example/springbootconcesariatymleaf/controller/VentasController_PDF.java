@@ -8,5 +8,5 @@ import org.springframework.stereotype.Controller;
 
 public class VentasController_PDF {
     @Autowired
-    private VentasService ventasServ
+    private VentasService ventasService;
 }
