@@ -12,5 +12,5 @@ Este proyecto esta hecho con la tecnología Spring boot para la parte Backend y 
     </a>
   </p>
 </div>
-<img src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats&cache_seconds=86400&theme=onedark"/>
+<img src="https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=spring-boot_concesionaria_autos_en_memoria&cache_seconds=86400&theme=onedark"/>
 https://github-readme-stats.vercel.app/api/pin/?username=anuraghazra&repo=github-readme-stats&cache_seconds=86400&theme=onedark
