@@ -5,6 +5,8 @@ import com.example.springbootconcesariatymleaf.servicio.ClienteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -23,6 +25,20 @@ public class ClienteController {
     public String mostrarFormularioNuevoCliente(Model model) {
         model.addAttribute("cliente", new ClienteModel());
         return "cliente_formulario";
+    }
+
+    /*Para el envio de un nuevo cliente*/
+    @PostMapping("/nuevo")
+    public String guardarCliente(@ModelAttribute("cliente") ClienteModel cliente, Model model) {
+        String identificacion = cliente.getIdentificacion();
+
+        boolean existeCedula = clienteService.existeClienteConCedula(identificacion);
+        if (existeCedula) {
+            model.addAttribute("existeCedula", true);
+            return "/cliente_formulario"; // Nombre de la vista del formulario
+        }
+        clienteService.saveCliente(cliente);
+        return "redirect:/clientes";
     }
 
 }
