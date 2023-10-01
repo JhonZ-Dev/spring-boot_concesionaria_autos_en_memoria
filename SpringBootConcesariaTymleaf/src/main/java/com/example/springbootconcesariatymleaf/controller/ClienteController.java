@@ -18,6 +18,7 @@ public class ClienteController {
     }
 
     /*Metodo para guardar un cliente*/
+    /*Este es para la vista*/
     @GetMapping("/nuevo")
     public String mostrarFormularioNuevoCliente(Model model) {
         model.addAttribute("cliente", new ClienteModel());
