@@ -167,4 +167,25 @@ public class ClienteController {
         writer.close();
     }
 
+    @PostMapping("/{id}/editar")
+    public String actualizarCliente(@PathVariable("id") Long id, @ModelAttribute("cliente") ClienteModel clienteActualizado) {
+        ClienteModel clienteExistente = clienteService.getClienteById(id);
+
+        if (clienteExistente == null) {
+            // Manejar caso en que el cliente no existe
+            return "redirect:/clientes";
+        }
+
+        // Actualizar los campos del cliente existente con los datos actualizados
+        clienteExistente.setNombre(clienteActualizado.getNombre());
+        clienteExistente.setApellido(clienteActualizado.getApellido());
+        clienteExistente.setTelefono(clienteActualizado.getTelefono());
+
+        // Guardar el cliente actualizado en la base de datos
+        clienteService.saveCliente(clienteExistente);
+
+        // Redirigir a la lista de clientes
+        return "redirect:/clientes";
+    }
+
 }
