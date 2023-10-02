@@ -36,4 +36,9 @@ public class HomeController {
         return "moda";
 
     }
+    @GetMapping("/grrupos")
+    public String grrupos(){
+        return "grrupos";
+
+    }
 }
