@@ -49,4 +49,14 @@ public class AutoController {
         autoService.saveAuto(auto);
         return "redirect:/autos";
     }
+    @GetMapping("/{id}")
+    public String mostrarDetalleAuto(@PathVariable("id") Long id, Model model) {
+        AutoModels auto = autoService.getAutoById(id);
+        ClienteModel cliente = auto.getCliente();
+
+        model.addAttribute("auto", auto);
+        model.addAttribute("cliente", cliente);
+
+        return "auto_detalle";
+    }
 }
