@@ -59,4 +59,9 @@ public class AutoController {
 
         return "auto_detalle";
     }
+    @GetMapping
+    public String mostrarListaAutos(Model model) {
+        model.addAttribute("autos", autoService.getAllAutos());
+        return "auto_lista";
+    }
 }
