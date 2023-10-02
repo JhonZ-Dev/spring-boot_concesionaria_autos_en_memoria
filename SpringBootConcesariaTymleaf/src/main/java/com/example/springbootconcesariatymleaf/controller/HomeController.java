@@ -26,4 +26,9 @@ public class HomeController {
         return "sobremi";
 
     }
+    @GetMapping("/ofertas")
+    public String ofertas(){
+        return "ofertas";
+
+    }
 }
