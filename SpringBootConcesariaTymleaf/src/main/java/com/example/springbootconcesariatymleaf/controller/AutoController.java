@@ -75,4 +75,9 @@ public class AutoController {
         autoService.saveAuto(auto);
         return "redirect:/autos";
     }
+    @PostMapping("/{id}/eliminar")
+    public String eliminarAuto(@PathVariable("id") Long id) {
+        autoService.eliminarAuto(id);
+        return "redirect:/autos";
+    }
 }
