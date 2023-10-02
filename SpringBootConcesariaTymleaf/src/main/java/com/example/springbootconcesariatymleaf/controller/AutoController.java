@@ -10,4 +10,9 @@ public class AutoController {
 
     private AutoService autoService;
     private ClienteService clienteService;
+
+    public AutoController(AutoService autoService, ClienteService clienteService) {
+        this.autoService = autoService;
+        this.clienteService = clienteService;
+    }
 }
