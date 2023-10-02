@@ -31,4 +31,9 @@ public class HomeController {
         return "ofertas";
 
     }
+    @GetMapping("/moda")
+    public String moda(){
+        return "moda";
+
+    }
 }
