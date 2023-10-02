@@ -6,9 +6,7 @@ import com.example.springbootconcesariatymleaf.servicio.AutoService;
 import com.example.springbootconcesariatymleaf.servicio.ClienteService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -44,5 +42,11 @@ public class AutoController {
         model.addAttribute("clientes", clientes);
 
         return "auto_formulario";
+    }
+
+    @PostMapping("/nuevo")
+    public String guardarAuto(@ModelAttribute("auto") AutoModels auto) {
+        autoService.saveAuto(auto);
+        return "redirect:/autos";
     }
 }
