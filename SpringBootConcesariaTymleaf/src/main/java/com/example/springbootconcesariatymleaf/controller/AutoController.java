@@ -70,4 +70,9 @@ public class AutoController {
         model.addAttribute("auto", auto);
         return "auto_formulario_editar";
     }
+    @PostMapping("/guardar")
+    public String guardarAutoEditado(@ModelAttribute("auto") AutoModels auto) {
+        autoService.saveAuto(auto);
+        return "redirect:/autos";
+    }
 }
