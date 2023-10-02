@@ -1,6 +1,7 @@
 package com.example.springbootconcesariatymleaf.controller;
 
 import com.example.springbootconcesariatymleaf.model.AutoModels;
+import com.example.springbootconcesariatymleaf.model.ClienteModel;
 import com.example.springbootconcesariatymleaf.servicio.AutoService;
 import com.example.springbootconcesariatymleaf.servicio.ClienteService;
 import org.springframework.stereotype.Controller;
