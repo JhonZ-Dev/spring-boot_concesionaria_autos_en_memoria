@@ -64,4 +64,10 @@ public class AutoController {
         model.addAttribute("autos", autoService.getAllAutos());
         return "auto_lista";
     }
+    @GetMapping("/{id}/editar")
+    public String mostrarFormularioEditarAuto(@PathVariable("id") Long id, Model model) {
+        AutoModels auto = autoService.getAutoById(id);
+        model.addAttribute("auto", auto);
+        return "auto_formulario_editar";
+    }
 }
