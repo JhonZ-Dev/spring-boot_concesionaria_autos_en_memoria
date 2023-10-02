@@ -21,4 +21,9 @@ public class HomeController {
         return "contacto";
 
     }
+    @GetMapping("/sobremi")
+    public String sobremi(){
+        return "sobremi";
+
+    }
 }
