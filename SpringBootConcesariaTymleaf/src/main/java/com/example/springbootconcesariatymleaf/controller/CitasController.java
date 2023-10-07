@@ -82,4 +82,23 @@ public class CitasController {
         model.addAttribute("cita", cita);
         return "formulario-editar-cita";
     }
+    @PostMapping("/{id}/editar")
+    public String actualizarCita(@PathVariable("id") Long id, @ModelAttribute("cita") CitasModels citaActualizada) {
+        CitasModels citaExistente = citasService.getCitaById(id);
+
+        if (citaExistente == null) {
+            // Manejar caso en que la cita no existe
+            return "redirect:/citas";
+        }
+
+        // Actualizar los campos de la cita existente con los datos actualizados
+        citaExistente.setFecha_estimada(citaActualizada.getFecha_estimada());
+        citaExistente.setHora_estimada(citaActualizada.getHora_estimada());
+
+        // Guardar la cita actualizada en la base de datos
+        citasService.saveCita(citaExistente);
+
+        // Redirigir a la lista de citas
+        return "redirect:/citas";
+    }
 }
