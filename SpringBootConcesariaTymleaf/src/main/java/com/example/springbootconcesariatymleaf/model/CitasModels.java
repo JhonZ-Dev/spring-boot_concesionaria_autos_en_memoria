@@ -13,7 +13,8 @@ public class CitasModels {
     private Long id;
     private LocalDate fecha_estimada;
     private String hora_estimada;
-    private AutoModels auto;
+    private ClienteModel cliente;
+
 
 
     public CitasModels(){
