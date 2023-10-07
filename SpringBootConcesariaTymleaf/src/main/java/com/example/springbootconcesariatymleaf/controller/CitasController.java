@@ -8,6 +8,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/citas")
 public class CitasController {
@@ -52,5 +54,12 @@ public class CitasController {
             }
         }
         return "redirect:/citas";
+    }
+
+    @GetMapping("")
+    public String mostrarListaCitas(Model model) {
+        List<CitasModels> citas = citasService.getAllCitas();
+        model.addAttribute("citas", citas);
+        return "lista-citas";
     }
 }
