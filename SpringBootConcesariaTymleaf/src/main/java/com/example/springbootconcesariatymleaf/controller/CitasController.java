@@ -72,4 +72,14 @@ public class CitasController {
         model.addAttribute("cita", cita);
         return "detalle-cita";
     }
+
+    @GetMapping("/{id}/editar")
+    public String mostrarFormularioEditarCita(@PathVariable("id") Long id, Model model) {
+        CitasModels cita = citasService.getCitaById(id);
+        if (cita == null) {
+            return "redirect:/citas";
+        }
+        model.addAttribute("cita", cita);
+        return "formulario-editar-cita";
+    }
 }
