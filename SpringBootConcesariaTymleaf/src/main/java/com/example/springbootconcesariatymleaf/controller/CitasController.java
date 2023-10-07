@@ -101,4 +101,10 @@ public class CitasController {
         // Redirigir a la lista de citas
         return "redirect:/citas";
     }
+
+    @GetMapping("/{id}/eliminar")
+    public String eliminarCliente(@PathVariable("id") Long id) {
+        citasService.deleteClienteById(id);
+        return "redirect:/citas";
+    }
 }
