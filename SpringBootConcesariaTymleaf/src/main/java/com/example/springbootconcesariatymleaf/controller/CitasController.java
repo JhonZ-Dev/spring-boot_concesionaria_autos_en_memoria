@@ -12,4 +12,8 @@ public class CitasController {
     private final CitasService citasService;
     private final ClienteService clienteService;
 
+    public CitasController(CitasService citasService, ClienteService clienteService) {
+        this.citasService = citasService;
+        this.clienteService = clienteService;
+    }
 }
