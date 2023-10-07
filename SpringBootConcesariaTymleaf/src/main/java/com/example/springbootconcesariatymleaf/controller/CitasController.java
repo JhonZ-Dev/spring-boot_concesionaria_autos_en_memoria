@@ -62,4 +62,14 @@ public class CitasController {
         model.addAttribute("citas", citas);
         return "lista-citas";
     }
+
+    @GetMapping("/{id}")
+    public String mostrarCitaPorId(@PathVariable("id") Long id, Model model) {
+        CitasModels cita = citasService.getCitaById(id);
+        if (cita == null) {
+            return "redirect:/citas";
+        }
+        model.addAttribute("cita", cita);
+        return "detalle-cita";
+    }
 }
