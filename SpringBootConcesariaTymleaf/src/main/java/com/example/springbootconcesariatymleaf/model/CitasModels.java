@@ -3,10 +3,11 @@ package com.example.springbootconcesariatymleaf.model;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.beans.ConstructorProperties;
 import java.time.LocalDate;
 
 @Data
-@NoArgsConstructor
+
 
 public class CitasModels {
 
