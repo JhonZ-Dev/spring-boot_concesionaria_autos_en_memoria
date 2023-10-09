@@ -64,6 +64,7 @@ public class CitasController_PDF {
         PdfPTable table = new PdfPTable(4); // 4 columnas para ID, fecha estimada, hora estimada y cliente
         table.setWidthPercentage(100);
         table.setSpacingBefore(10f); // Espacio antes de la tabla
+        // Establecer colores de las columnas
 
     }
 }
