@@ -52,5 +52,8 @@ public class CitasController_PDF {
                 }
             }
         });
+        document.open();
+
+
     }
 }
