@@ -26,5 +26,7 @@ public class CitasController_PDF {
         Document document = new Document(PageSize.A4.rotate());
 
         response.setContentType("application/pdf");
+        response.setHeader("Content-Disposition", "attachment; filename=\"cita-" + citaId + ".pdf\"");
+
     }
 }
