@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import java.awt.*;
 import java.io.IOException;
 import java.io.OutputStream;
 
@@ -54,6 +55,7 @@ public class CitasController_PDF {
         });
         document.open();
         // Estilos de colores para las columnas y filas
+        Color colorColumnas = new Color(255, 191, 0); // Color gris claro para las columnas
 
     }
 }
