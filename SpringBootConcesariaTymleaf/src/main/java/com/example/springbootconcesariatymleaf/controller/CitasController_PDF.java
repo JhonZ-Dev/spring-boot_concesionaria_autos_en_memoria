@@ -59,6 +59,7 @@ public class CitasController_PDF {
         // Agregar contenido al documento PDF
         Paragraph paragraph = new Paragraph("DETALLE DE LA CITA", FontFactory.getFont(FontFactory.HELVETICA_BOLD, 24));
         paragraph.setAlignment(Element.ALIGN_CENTER);
+        document.add(paragraph);
 
     }
 }
