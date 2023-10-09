@@ -60,6 +60,8 @@ public class CitasController_PDF {
         Paragraph paragraph = new Paragraph("DETALLE DE LA CITA", FontFactory.getFont(FontFactory.HELVETICA_BOLD, 24));
         paragraph.setAlignment(Element.ALIGN_CENTER);
         document.add(paragraph);
+        // Agregar tabla con los datos de la cita
+        PdfPTable table = new PdfPTable(4); // 4 columnas para ID, fecha estimada, hora estimada y cliente
 
     }
 }
