@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import java.io.IOException;
+import java.io.OutputStream;
 
 @Controller
 public class CitasController_PDF {
@@ -27,6 +28,7 @@ public class CitasController_PDF {
 
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=\"cita-" + citaId + ".pdf\"");
+        OutputStream outputStream = response.getOutputStream();
 
     }
 }
