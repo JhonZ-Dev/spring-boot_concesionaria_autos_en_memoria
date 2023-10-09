@@ -65,6 +65,7 @@ public class CitasController_PDF {
         table.setWidthPercentage(100);
         table.setSpacingBefore(10f); // Espacio antes de la tabla
         // Establecer colores de las columnas
+        table.getDefaultCell().setBackgroundColor(colorColumnas);
 
     }
 }
