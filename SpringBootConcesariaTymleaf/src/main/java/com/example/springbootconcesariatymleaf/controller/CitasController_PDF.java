@@ -3,6 +3,7 @@ package com.example.springbootconcesariatymleaf.controller;
 import com.example.springbootconcesariatymleaf.model.CitasModels;
 import com.example.springbootconcesariatymleaf.servicio.CitasService;
 import com.lowagie.text.Document;
+import com.lowagie.text.FontFactory;
 import com.lowagie.text.PageSize;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfPTable;
@@ -59,6 +60,7 @@ public class CitasController_PDF {
         Color colorFilas = new Color(255, 255, 255); // Color gris claro para las filas
 
         // Agregar contenido al documento PDF
+        Paragraph paragraph = new Paragraph("DETALLE DE LA CITA", FontFactory.getFont(FontFactory.HELVETICA_BOLD, 24));
 
     }
 }
