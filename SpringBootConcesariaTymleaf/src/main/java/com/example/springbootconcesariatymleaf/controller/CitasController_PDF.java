@@ -4,6 +4,7 @@ import com.example.springbootconcesariatymleaf.model.CitasModels;
 import com.example.springbootconcesariatymleaf.servicio.CitasService;
 import com.lowagie.text.Document;
 import com.lowagie.text.PageSize;
+import com.lowagie.text.pdf.PdfWriter;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -29,6 +30,7 @@ public class CitasController_PDF {
         response.setContentType("application/pdf");
         response.setHeader("Content-Disposition", "attachment; filename=\"cita-" + citaId + ".pdf\"");
         OutputStream outputStream = response.getOutputStream();
+        PdfWriter writer = PdfWriter.getInstance(document, outputStream);
 
     }
 }
