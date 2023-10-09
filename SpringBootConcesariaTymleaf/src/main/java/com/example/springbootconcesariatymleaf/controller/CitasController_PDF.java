@@ -40,6 +40,7 @@ public class CitasController_PDF {
                 try {
                     PdfPTable headerTable = new PdfPTable(2);
                     headerTable.setWidthPercentage(100);
+                    document.add(headerTable);
 
 
                 }catch (
