@@ -62,6 +62,7 @@ public class CitasController_PDF {
         document.add(paragraph);
         // Agregar tabla con los datos de la cita
         PdfPTable table = new PdfPTable(4); // 4 columnas para ID, fecha estimada, hora estimada y cliente
+        table.setWidthPercentage(100);
 
     }
 }
