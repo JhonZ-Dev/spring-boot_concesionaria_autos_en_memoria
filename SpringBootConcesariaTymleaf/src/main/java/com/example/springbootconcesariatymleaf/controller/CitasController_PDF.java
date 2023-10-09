@@ -53,7 +53,7 @@ public class CitasController_PDF {
             }
         });
         document.open();
-
+        // Estilos de colores para las columnas y filas
 
     }
 }
