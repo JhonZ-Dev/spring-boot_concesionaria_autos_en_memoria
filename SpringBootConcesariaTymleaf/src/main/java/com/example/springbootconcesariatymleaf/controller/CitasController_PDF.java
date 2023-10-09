@@ -2,6 +2,8 @@ package com.example.springbootconcesariatymleaf.controller;
 
 import com.example.springbootconcesariatymleaf.model.CitasModels;
 import com.example.springbootconcesariatymleaf.servicio.CitasService;
+import com.lowagie.text.Document;
+import com.lowagie.text.PageSize;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -21,5 +23,6 @@ public class CitasController_PDF {
                            HttpServletResponse response) throws IOException{
 
         CitasModels citasModels = citasService.getCitaById(citaId);
+        Document document = new Document(PageSize.A4.rotate());
     }
 }
