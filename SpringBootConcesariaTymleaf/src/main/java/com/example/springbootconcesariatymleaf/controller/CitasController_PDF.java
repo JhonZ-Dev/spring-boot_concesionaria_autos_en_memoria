@@ -4,6 +4,8 @@ import com.example.springbootconcesariatymleaf.model.CitasModels;
 import com.example.springbootconcesariatymleaf.servicio.CitasService;
 import com.lowagie.text.Document;
 import com.lowagie.text.PageSize;
+import com.lowagie.text.pdf.PdfPageEvent;
+import com.lowagie.text.pdf.PdfPageEventHelper;
 import com.lowagie.text.pdf.PdfWriter;
 import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,5 +34,10 @@ public class CitasController_PDF {
         OutputStream outputStream = response.getOutputStream();
         PdfWriter writer = PdfWriter.getInstance(document, outputStream);
 
+        writer.setPageEvent(new PdfPageEventHelper(){
+            public void onStartPage(PdfWriter writer, Document document){
+                
+            }
+        });
     }
 }
