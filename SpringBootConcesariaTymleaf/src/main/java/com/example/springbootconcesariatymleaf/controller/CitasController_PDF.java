@@ -36,7 +36,13 @@ public class CitasController_PDF {
 
         writer.setPageEvent(new PdfPageEventHelper(){
             public void onStartPage(PdfWriter writer, Document document){
-                
+                try {
+
+                }catch (
+                        Exception e
+                ){
+                    e.printStackTrace();
+                }
             }
         });
     }
