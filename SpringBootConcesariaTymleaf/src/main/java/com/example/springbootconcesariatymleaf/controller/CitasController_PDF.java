@@ -58,5 +58,7 @@ public class CitasController_PDF {
         Color colorColumnas = new Color(255, 191, 0); // Color gris claro para las columnas
         Color colorFilas = new Color(255, 255, 255); // Color gris claro para las filas
 
+        // Agregar contenido al documento PDF
+
     }
 }
