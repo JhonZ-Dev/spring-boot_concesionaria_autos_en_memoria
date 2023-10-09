@@ -4,6 +4,7 @@ import com.example.springbootconcesariatymleaf.model.CitasModels;
 import com.example.springbootconcesariatymleaf.servicio.CitasService;
 import com.lowagie.text.Document;
 import com.lowagie.text.PageSize;
+import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfPTable;
 import com.lowagie.text.pdf.PdfPageEvent;
 import com.lowagie.text.pdf.PdfPageEventHelper;
@@ -41,6 +42,7 @@ public class CitasController_PDF {
                     PdfPTable headerTable = new PdfPTable(2);
                     headerTable.setWidthPercentage(100);
                     document.add(headerTable);
+                    document.add(new Paragraph("\n"));
 
 
                 }catch (
