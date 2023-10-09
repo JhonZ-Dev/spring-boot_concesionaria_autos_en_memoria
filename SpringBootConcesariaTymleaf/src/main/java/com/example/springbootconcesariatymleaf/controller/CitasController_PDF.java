@@ -24,5 +24,7 @@ public class CitasController_PDF {
 
         CitasModels citasModels = citasService.getCitaById(citaId);
         Document document = new Document(PageSize.A4.rotate());
+
+        response.setContentType("application/pdf");
     }
 }
