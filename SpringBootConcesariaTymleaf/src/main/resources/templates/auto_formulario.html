@@ -31,6 +31,76 @@
   <input type="submit" value="Registrar" onclick="mostrarSweetAlert(event)">
 </form>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.15.6/dist/sweetalert2.min.js"></script>
+<script>
+  function mostrarSweetAlert(event) {
+    event.preventDefault(); // Evita que el formulario se envíe automáticamente
 
+    // Valida todos los campos requeridos
+    var modelo = document.getElementById("modelo").value;
+    var marca = document.getElementById("marca").value;
+    var anio = document.getElementById("anio").value;
+    var color = document.getElementById("color").value;
+    var imagen = document.getElementById("imagen").value;
+
+    if (
+            modelo.trim() === "" ||
+            marca.trim() === "" ||
+            anio.trim() === "" ||
+            color.trim() === "" ||
+            imagen.trim() === ""
+    ) {
+      // Muestra un SweetAlert de error si algún campo está vacío
+      Swal.fire({
+        title: "Error",
+        text: "Por favor, complete todos los campos.",
+        icon: "error",
+        confirmButtonText: "Aceptar"
+      });
+      return; // Detiene el envío del formulario
+    }
+    if (!/^[a-zA-Z]+$/.test(marca)) {
+      // Muestra un SweetAlert de error si el campo de marca no contiene solo texto
+      Swal.fire({
+        title: "Error",
+        text: "El campo de marca solo acepta texto.",
+        icon: "error",
+        confirmButtonText: "Aceptar"
+      });
+      return; // Detiene el envío del formulario
+    } if (!/^[a-zA-Z]+$/.test(color)) {
+      // Muestra un SweetAlert de error si el campo de marca no contiene solo texto
+      Swal.fire({
+        title: "Error",
+        text: "El campo de color solo acepta texto.",
+        icon: "error",
+        confirmButtonText: "Aceptar"
+      });
+      return; // Detiene el envío del formulario
+    }
+
+    if (!/^[\d]+$/.test(anio)) {
+      // Muestra un SweetAlert de error si el campo de año no contiene solo números
+      Swal.fire({
+        title: "Error",
+        text: "El campo de año solo acepta números.",
+        icon: "error",
+        confirmButtonText: "Aceptar"
+      });
+      return; // Detiene el envío del formulario
+    }
+    // Muestra el SweetAlert de éxito si la validación pasa
+    Swal.fire({
+      title: "¡Registro exitoso!",
+      text: "El auto ha sido registrado correctamente.",
+      icon: "success",
+      confirmButtonText: "Aceptar"
+    }).then((result) => {
+      // Si se hace clic en el botón de confirmación, envía el formulario
+      if (result.isConfirmed) {
+        event.target.form.submit();
+      }
+    });
+  }
+</script>
 </body>
 </html>
