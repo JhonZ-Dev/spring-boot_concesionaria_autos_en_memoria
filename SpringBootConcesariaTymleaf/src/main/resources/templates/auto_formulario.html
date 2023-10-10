@@ -7,8 +7,28 @@
 <body>
 <h1>Registrar Auto</h1>
 
-<form>
-  
+<form action="/autos/nuevo" method="post" th:object="${auto}">
+  <!-- Campo oculto para enviar el clienteId -->
+  <input type="hidden" th:field="*{cliente.id}" th:value="${cliente.id}" />
+  <label><i class="fas fa-car"></i> Modelo:</label>
+  <input type="text" th:field="*{modelo} " id="modelo" required><br>
+
+  <label><i class="fas fa-industry"></i> Marca:</label>
+  <input type="text" th:field="*{marca}" id="marca" required><br>
+
+  <label><i class="fas fa-calendar-alt"></i> Año:</label>
+  <input type="text" th:field="*{anio}" id="anio" required><br>
+
+  <label><i class="fas fa-palette"></i> Color:</label>
+  <input type="text" th:field="*{color}" id="color" required><br>
+
+  <label><i class="fas fa-image"></i> Imagen:</label>
+  <input type="file" name="imagen" accept="image/*"  id="imagen" required><br>
+
+  <label><i class="fas fa-user"></i> Cliente:</label>
+  <input th:field="*{cliente.nombre}" disabled> <br>
+
+  <input type="submit" value="Registrar" onclick="mostrarSweetAlert(event)">
 </form>
 </body>
 </html>
