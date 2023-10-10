@@ -7,6 +7,30 @@
 <body>
 
 <h1>Agregar un Auto</h1>
+<div></div>
+<form th:action="@{/autos/nuevo}" th:object="${auto}" method="post">
+    <label>Modelo:</label>
+    <input type="text" th:field="*{modelo}" required/><br>
+
+    <label>Marca:</label>
+    <input type="text" th:field="*{marca}" required/><br>
+
+    <label>Año:</label>
+    <input type="text" th:field="*{anio}" required/><br>
+
+    <label>Color:</label>
+    <input type="text" th:field="*{color}" required/><br>
+
+    <label>Imagen:</label>
+    <input type="file" th:field="*{imagen}" accept="image/*"/><br>
+
+    <label>Cliente:</label>
+    <select th:field="*{cliente.id}" required>
+        <option th:each="cliente : ${clientes}" th:value="${cliente.id}" th:text="${cliente.nombre} ${cliente.apellido}"></option>
+    </select><br>
+
+    <input type="submit" value="Guardar"/>
+</form>
 
 </body>
 </html>
