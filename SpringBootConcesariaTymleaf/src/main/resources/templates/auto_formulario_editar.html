@@ -35,5 +35,24 @@
         var modelo = document.getElementById("modelo").value;
         var marca = document.getElementById("marca").value;
         var anio = document.getElementById("anio").value;
+
+        if (
+            modelo.trim() === "" ||
+            marca.trim() === "" ||
+            anio.trim()===""
+        ) {
+            // Muestra un SweetAlert de error si algún campo está vacío
+            Swal.fire({
+                title: "Error",
+                text: "Por favor, complete todos los campos.",
+                icon: "error",
+                confirmButtonText: "Aceptar"
+            });
+            return; // Detiene el envío del formulario
+        }
+
+
+
+
     </body>
 </html>
