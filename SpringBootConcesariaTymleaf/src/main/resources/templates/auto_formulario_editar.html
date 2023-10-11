@@ -50,6 +50,18 @@
             });
             return; // Detiene el envío del formulario
         }
+        Swal.fire({
+            title: "¡Actualización Exitosa!",
+            text: "Se han Actualizado los campos",
+            icon: "success",
+            confirmButtonText: "Aceptar"
+        }).then((result) => {
+            // Si se hace clic en el botón de confirmación, envía el formulario
+            if (result.isConfirmed) {
+                event.target.form.submit();
+            }
+        });
+    }
 
 
 
