@@ -22,6 +22,9 @@
         <th>Acciones</th>
     </tr>
     <tr th:each="auto : ${autos}">
-
+        <td th:text="${auto.id}"></td>
+        <td th:text="${auto.modelo}"></td>
+        <td th:text="${auto.marca}"></td>
+        <td th:text="${auto.anio}"></td>
 </body>
 </html>
