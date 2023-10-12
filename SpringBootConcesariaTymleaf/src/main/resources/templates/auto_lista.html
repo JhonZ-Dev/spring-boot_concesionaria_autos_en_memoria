@@ -26,5 +26,9 @@
         <td th:text="${auto.modelo}"></td>
         <td th:text="${auto.marca}"></td>
         <td th:text="${auto.anio}"></td>
+
+
+        <td><a th:href="@{/autos/{id}(id=${auto.id})}"><i class="fas fa-eye"></i>Ver detalles</a></td>
+
 </body>
 </html>
