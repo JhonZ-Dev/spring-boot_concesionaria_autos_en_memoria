@@ -48,7 +48,9 @@
             if (arrow.classList.contains('left')) {
                 currentIndex = (currentIndex - 1 + images.length) % images.length;
             } else {
-
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+            updateImage();
 
 </script>
 </body>
