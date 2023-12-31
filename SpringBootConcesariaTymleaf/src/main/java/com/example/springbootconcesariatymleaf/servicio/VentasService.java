@@ -19,5 +19,10 @@ public class VentasService {
         return ventasRepository.getVentaById(id);
     }
 
+     public List<VentasModels> getAllVentas() {
+        return ventasRepository.getAllVentas();
+    }
+  
+
    
 }
